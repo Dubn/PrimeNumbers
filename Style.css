@@ -1,0 +1,17 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.Content
+{
+	width: 100%;
+	background-color: black;
+	color: white;
+	overflow: hidden;
+}
+h1{
+	text-align: center;
+	margin-top: 0px;
+	padding: 5px;
+}
