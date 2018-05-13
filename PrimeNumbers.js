@@ -1,12 +1,12 @@
-	var primeNumbers = []; 
-	var length = 100;
-	var numbers = []; 
-	var sqrtlength;
-	var numbersToDispay = [];
-	var numbersToDispayRange = [0,0];
 	var numberOfElementsToDisplay;
-	var steps = 0;
+	var numbersToDispayRange = [0,0];
+	var numbersToDispay = [];
+	var primeNumbers = []; 
+	var sqrtlength;
+	var numbers = []; 
+	var length = 100;
 	var loader;
+	var steps = 0;
 	var a;
 
 function start(){
@@ -57,23 +57,23 @@ async function getPrimeNumbers(){
     await splitPrimeNumbers();
 }
 
-async function printNumbers(){
-	a.innerHTML += numbersToDispay.join('');
-	await splitPrimeNumbers();
-}
-
 function splitPrimeNumbers(){
 	numbersToDispay = [];
 	steps++;
+	getNextRange();
 	for(var i = numbersToDispayRange[0];i<=numbersToDispayRange[1];i++){
 		numbersToDispay.push("<p class='number'>" + primeNumbers[i] + "</p>");
 	}
- 	getNextRange();
 	if(steps<=10){
 		setTimeout(printNumbers, 200);
 	}else{
 		loader.style.display = "none";
 	}
+}
+
+async function printNumbers(){
+	a.innerHTML += numbersToDispay.join('');
+	await splitPrimeNumbers();
 }
 
 function getNextRange(){
