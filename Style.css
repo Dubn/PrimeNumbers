@@ -2,16 +2,69 @@ body
 {
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Roboto', sans-serif;
 }
 .Content
 {
 	width: 100%;
-	background-color: black;
-	color: white;
 	overflow: hidden;
 }
 h1{
 	text-align: center;
 	margin-top: 0px;
 	padding: 5px;
+}
+p.number {
+	width: 50px;
+	height: 25px;
+	display: inline-block;
+	background-color: #DC5B21;
+	color:white;
+	float: left;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 2px;
+    padding: 0 0 0 0;
+    border-radius: 5px;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    display: none;
+    width: 15px;
+    height: 15px;
+    animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+form{
+   
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number]{
+width: 160px;
+height: 20px;
+}
+button[type=button]{
+	background-color: #FF7022;
+	border-radius: 2px;
+	border:none;
+    height: 26px;
+	-webkit-transition-duration:0.4s;
+	transition-duration: 0.4s;
+}
+button[type=button]:hover{
+	background-color: #FF5C03;
+	color:white;
 }
