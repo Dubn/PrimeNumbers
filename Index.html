@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prime numbers</title>
+	<title>Generate Prime numbers</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+
 	<script type="text/javascript" src="PrimeNumbers.js" async>
 	</script>
 </head>
 <body">
 	<div class="Content">
-		<h1>Prime Numbers</h1>
-		<form>
-			<p>Input number in which you want to get prime numbers</p>
-			<input type="number" id="length" value="10">
-			<button type="button" onclick="start();"> Submit </button>
+		<h1>Generate Prime Numbers</h1>
+		<form onsubmit="return false;">
+			<p>Enter the number from which you want to find all prime numbers</p>
+			<input type="number" id="length" value="1000000">
+			<button type="button" onclick="start();"> Generate!</button>
 			<div class="loader"></div>
 		</form>
 
 		<p class="getNumbers"></p> 
-		<div id="cover"></div>
-
 	</div> 
 </body>
 </html>
