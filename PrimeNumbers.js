@@ -28,7 +28,7 @@ async function initializeNumbers(){
     	numbers[i] = 1;
 	}
 	await findPrimeNumbers();
-	loader.style.display = "block";
+	loader.style.display = "inline-flex";
 }
 
 async function findPrimeNumbers(){
